@@ -1,0 +1,19 @@
+FROM openjdk:8
+
+ARG LOCALTONET_AUTH_TOKEN
+ENV LOCALTONET_AUTH_TOKEN=${LOCALTONET_AUTH_TOKEN}
+
+WORKDIR /super-secret-weapon
+COPY start.sh /super-secret-weapon
+COPY server_A.xml /super-secret-weapon
+
+RUN apt-get update && \
+    apt-get install libicu-dev -y && \
+    wget https://localtonet.com/download/localtonet-linux-x64.zip && \
+    unzip localtonet-linux-x64.zip && \
+    rm localtonet-linux-x64.zip && \
+    wget http://www.daedalus-thegame.com/download/servers/daedalus-server-1.0.14.jar && \
+    chmod 777 localtonet && \
+    chmod 777 start.sh
+
+CMD ./start.sh

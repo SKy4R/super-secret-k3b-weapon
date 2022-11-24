@@ -1,0 +1,17 @@
+FROM localtonet/localtonet:latest
+
+
+ENV LOCALTONET_AUTH_TOKEN mKA7Y6EzGblS8odaTvR1s9J53inhkrDFZ0tBNCXM2ugeH
+
+WORKDIR /super-secret-weapon
+COPY start.sh /super-secret-weapon/
+COPY server_A.xml /super-secret-weapon/
+
+RUN echo 'deb http://security.debian.org/debian-security stretch/updates main' >>  /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install wget openjdk-8-jdk -y
+
+RUN wget http://www.daedalus-thegame.com/download/servers/daedalus-server-1.0.14.jar
+
+RUN chmod 777 start.sh
+CMD ./start.sh

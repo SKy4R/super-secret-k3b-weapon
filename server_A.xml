@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+	<server>
+		<serverName>K3B-Daedalus-server</serverName>
+		<adminPassword/>
+		<connectionPassword/>
+		<netPort>59555</netPort>
+		<mapList>
+			<map>/maps/dm17.map</map>
+			<map>/maps/dm18.map</map>
+		</mapList>
+		<gameType>DEATHMATCH</gameType>
+		<maxPlayers>16</maxPlayers>
+		<nbBots>0</nbBots>
+		<versusBots>false</versusBots>
+		<botsLevel>MEDIUM</botsLevel>
+		<internet>false</internet>
+		<scoreLimit>5</scoreLimit>
+		<timeLimit>300</timeLimit>
+		<nbLives>5</nbLives>
+		<friendlyFire>true</friendlyFire>
+		<instaGib>false</instaGib>
+		<darkArena>false</darkArena>
+		<updateRate>HIGH</updateRate>
+	</server>
+</config>
