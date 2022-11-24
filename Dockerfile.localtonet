@@ -13,5 +13,5 @@ RUN apt-get install wget openjdk-8-jdk -y
 
 RUN wget http://www.daedalus-thegame.com/download/servers/daedalus-server-1.0.14.jar
 
-RUN chmod 777 start.sh
+RUN chmod 777 localtonetStart.sh
 CMD ./localtonetStart.sh

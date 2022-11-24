@@ -16,6 +16,6 @@ RUN wget https://localtonet.com/download/localtonet-linux-x64.zip && \
     wget http://www.daedalus-thegame.com/download/servers/daedalus-server-1.0.14.jar
 
 RUN chmod 777 localtonet && \
-    chmod 777 start.sh
+    chmod 777 jdkStart.sh
 
 CMD ./jdkStart.sh
